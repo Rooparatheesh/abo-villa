@@ -1,3 +1,6 @@
+const BASE = import.meta.env.BASE_URL || '/';
+export const assetUrl = (path) => `${BASE.endsWith('/') ? BASE : BASE + '/'}${path.replace(/^\//, '')}`;
+
 export const homestayInfo = {
   name: "Abo Villa",
   subname: "Homestay & Serene Retreat",
@@ -53,9 +56,9 @@ export const roomsData = [
     rating: 4.98,
     reviewsCount: 42,
     images: [
-      "/photos/bedroom1.jpg",
-      "/photos/living-room.jpg",
-      "/photos/balcony.jpg"
+      assetUrl('photos/bedroom1.jpg'),
+      assetUrl('photos/living-room.jpg'),
+      assetUrl('photos/balcony.jpg')
     ],
     description: "A spacious, elegantly furnished bedroom with handcrafted teak wood furniture, warm cove lighting, and serene garden views. Features a double bed with premium linen, wardrobe, and desk — perfect for couples or solo travellers.",
     features: [
@@ -81,9 +84,9 @@ export const roomsData = [
     rating: 4.96,
     reviewsCount: 31,
     images: [
-      "/photos/bedroom2.jpg",
-      "/photos/bedroom1.jpg",
-      "/photos/balcony.jpg"
+      assetUrl('photos/bedroom2.jpg'),
+      assetUrl('photos/bedroom1.jpg'),
+      assetUrl('photos/balcony.jpg')
     ],
     description: "A light-filled, airy bedroom featuring a polished marble floor, split AC, and large windows that frame lush garden greenery. Cosy curtains, a work desk, and clean en-suite bathroom make for a supremely restful stay.",
     features: [
@@ -109,9 +112,9 @@ export const roomsData = [
     rating: 4.94,
     reviewsCount: 26,
     images: [
-      "/photos/living-room.jpg",
-      "/photos/kitchen.jpg",
-      "/photos/exterior.jpg"
+      assetUrl('photos/living-room.jpg'),
+      assetUrl('photos/kitchen.jpg'),
+      assetUrl('photos/exterior.jpg')
     ],
     description: "An impressive two-storey living hall featuring a hand-crafted teak wood heritage staircase, ornate pendant lights, comfortable wooden armchairs, and indoor plants. The heart of the villa — perfect for family gatherings.",
     features: [
@@ -137,12 +140,12 @@ export const roomsData = [
     rating: 4.99,
     reviewsCount: 18,
     images: [
-      "/photos/exterior.jpg",
-      "/photos/living-room.jpg",
-      "/photos/kitchen.jpg",
-      "/photos/balcony.jpg",
-      "/photos/bedroom1.jpg",
-      "/photos/bedroom2.jpg"
+      assetUrl('photos/exterior.jpg'),
+      assetUrl('photos/living-room.jpg'),
+      assetUrl('photos/kitchen.jpg'),
+      assetUrl('photos/balcony.jpg'),
+      assetUrl('photos/bedroom1.jpg'),
+      assetUrl('photos/bedroom2.jpg')
     ],
     description: "Reserve the entire 279 m² Abo Villa exclusively for your family vacation, wedding guests, or holiday retreat. Enjoy a private white villa with red tile roof, grand gravel driveway, courtyard for 150+ people, traditional Kerala kitchen, river views, and personal host care by Binoy Mon.",
     features: [
@@ -232,37 +235,37 @@ export const experiencesData = [
 export const galleryImages = [
   {
     id: 1,
-    url: "/photos/exterior.jpg",
+    url: assetUrl('photos/exterior.jpg'),
     title: "Abo Villa — White Villa with Red Tile Roof & Grand Driveway",
     category: "Exterior"
   },
   {
     id: 2,
-    url: "/photos/living-room.jpg",
+    url: assetUrl('photos/living-room.jpg'),
     title: "Heritage Teak Staircase & Grand Living Hall",
     category: "Interior"
   },
   {
     id: 3,
-    url: "/photos/bedroom1.jpg",
+    url: assetUrl('photos/bedroom1.jpg'),
     title: "Classic Bedroom with Teak Furniture & Cove Lighting",
     category: "Rooms"
   },
   {
     id: 4,
-    url: "/photos/bedroom2.jpg",
+    url: assetUrl('photos/bedroom2.jpg'),
     title: "Air-Conditioned Bedroom with Marble Floor & Garden Windows",
     category: "Rooms"
   },
   {
     id: 5,
-    url: "/photos/kitchen.jpg",
+    url: assetUrl('photos/kitchen.jpg'),
     title: "Traditional Kerala Heritage Kitchen with Black Granite",
     category: "Dining"
   },
   {
     id: 6,
-    url: "/photos/balcony.jpg",
+    url: assetUrl('photos/balcony.jpg'),
     title: "Balcony with Garden & Tree Views — Wooden Deck",
     category: "Exterior"
   },

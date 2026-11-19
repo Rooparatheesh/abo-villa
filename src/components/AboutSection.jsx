@@ -9,7 +9,7 @@ import {
   MapPin,
   Home
 } from 'lucide-react';
-import { homestayInfo } from '../data/homestayData';
+import { homestayInfo, assetUrl } from '../data/homestayData';
 
 export default function AboutSection() {
   return (
@@ -41,7 +41,7 @@ export default function AboutSection() {
           <div className="lg:col-span-6 space-y-4">
             <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
               <img 
-                src="/photos/exterior.jpg" 
+                src={assetUrl('photos/exterior.jpg')} 
                 alt={`${homestayInfo.name} Front View`} 
                 className="w-full h-80 sm:h-96 object-cover hover:scale-105 transition-transform duration-700"
               />
@@ -54,14 +54,14 @@ export default function AboutSection() {
             <div className="grid grid-cols-2 gap-4">
               <div className="rounded-2xl overflow-hidden shadow-md border-2 border-white">
                 <img 
-                  src="/photos/living-room.jpg" 
+                  src={assetUrl('photos/living-room.jpg')} 
                   alt="Abo Villa Heritage Living Room" 
                   className="w-full h-44 object-cover hover:scale-105 transition-transform duration-500"
                 />
               </div>
               <div className="rounded-2xl overflow-hidden shadow-md border-2 border-white">
                 <img 
-                  src="/photos/kitchen.jpg" 
+                  src={assetUrl('photos/kitchen.jpg')} 
                   alt="Traditional Kerala Heritage Kitchen" 
                   className="w-full h-44 object-cover hover:scale-105 transition-transform duration-500"
                 />

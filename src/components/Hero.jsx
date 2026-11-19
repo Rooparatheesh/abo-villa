@@ -10,7 +10,7 @@ import {
   Compass,
   Sparkles
 } from 'lucide-react';
-import { homestayInfo, roomsData } from '../data/homestayData';
+import { homestayInfo, roomsData, assetUrl } from '../data/homestayData';
 
 export default function Hero({ onOpenBooking }) {
   const [checkIn, setCheckIn] = useState('');
@@ -34,7 +34,7 @@ export default function Hero({ onOpenBooking }) {
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat scale-105 transform duration-1000 ease-out"
         style={{
-          backgroundImage: `linear-gradient(to bottom, rgba(14, 32, 26, 0.55) 0%, rgba(14, 32, 26, 0.45) 40%, rgba(14, 32, 26, 0.88) 100%), url('/photos/exterior.jpg')`
+          backgroundImage: `linear-gradient(to bottom, rgba(14, 32, 26, 0.55) 0%, rgba(14, 32, 26, 0.45) 40%, rgba(14, 32, 26, 0.88) 100%), url('${assetUrl('photos/exterior.jpg')}')`
         }}
       />
 
